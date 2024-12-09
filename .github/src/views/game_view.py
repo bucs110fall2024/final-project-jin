@@ -60,7 +60,7 @@ class GameView:
 
     def update(self):
         # Draw background
-        self.screen.fill((255, 255, 255))  # White background
+        self.screen.fill((255, 255, 255))  
 
         # Draw target
         self.screen.blit(self.target_image, (self.target_x, self.target_y))
@@ -70,16 +70,16 @@ class GameView:
 
         # Draw and move arrows
         for arrow in self.arrows[:]:
-            arrow['rect'].y -= 5  # Move arrow upwards
-            arrow['rect'].x += arrow['wind']  # Move arrow sideways based on wind effect
-            pygame.draw.rect(self.screen, (0, 0, 0), arrow['rect'])  # Draw arrow in black
+            arrow['rect'].y -= 5 
+            arrow['rect'].x += arrow['wind'] 
+            pygame.draw.rect(self.screen, (0, 0, 0), arrow['rect']) 
 
             # Check if the arrow hits the target
             if self.target_x < arrow['rect'].x < self.target_x + 40 and self.target_y < arrow['rect'].y < self.target_y + 40:
                 self.arrows.remove(arrow)
                 self.score += 1
                 self.hit_message = 'HIT!'
-                self.hit_message_timer = 30  # Number of frames to display the hit message
+                self.hit_message_timer = 30
 
         # Display score
         score_text = self.font.render(f'Score: {self.score}', True, (0, 0, 0))

@@ -18,6 +18,8 @@ https://corporate.target.com/getmedia/1aeb73c1-89d8-4547-90a0-e787a57270d5/Targe
 
 
 ##Screen shout of GUI
+![Archery](assets/images/archer.png)
+![Target](assets/images/target.png)
 
 1. **Start Menu Display**
    - **Description**: Verify that the start menu is displayed upon launching the game.
